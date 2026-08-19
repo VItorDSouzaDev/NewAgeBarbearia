@@ -17,8 +17,7 @@ export function WhatsAppFab() {
       initial={reduce ? false : { scale: 0.8, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
       transition={{ delay: 0.6, duration: 0.3, ease: "easeOut" }}
-      whileHover={reduce ? undefined : { scale: 1.06 }}
-      whileTap={reduce ? undefined : { scale: 0.95 }}
+      {...(reduce ? {} : { whileHover: { scale: 1.06 }, whileTap: { scale: 0.95 } })}
       className="fixed bottom-5 right-5 z-50 flex size-14 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-[var(--shadow-gold)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
     >
       <MessageCircle className="size-6" aria-hidden />
