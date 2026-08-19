@@ -297,7 +297,7 @@ export function useStore() {
 /* ---------- Grade de horários por duração do serviço ---------- */
 
 const toMinutes = (hhmm: string) => {
-  const [h, m] = hhmm.split(":").map(Number);
+  const [h = 0, m = 0] = hhmm.split(":").map(Number);
   return h * 60 + m;
 };
 const toHHMM = (mins: number) =>
