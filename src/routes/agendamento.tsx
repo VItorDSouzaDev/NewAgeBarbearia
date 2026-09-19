@@ -21,7 +21,7 @@ export const Route = createFileRoute("/agendamento")({
       { property: "og:title", content: "Agendar horário — New Age" },
       {
         property: "og:description",
-        content: "Agendamento online de corte e barba na Vila Madalena.",
+        content: "Agendamento online de corte e barba na Várzea, Teresópolis.",
       },
     ],
   }),

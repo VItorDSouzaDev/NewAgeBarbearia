@@ -19,7 +19,7 @@ import {
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "New Age — Barbearia boutique na Vila Madalena" },
+      { title: "New Age — Barbearia boutique na Várzea, Teresópolis" },
       {
         name: "description",
         content:
