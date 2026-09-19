@@ -1,5 +1,4 @@
 import {
-  createContext,
   useCallback,
   useContext,
   useEffect,
@@ -8,6 +7,9 @@ import {
   type ReactNode,
 } from "react";
 import { BARBERS, SERVICES, serviceById, type Barber } from "./shop";
+import { StoreContext, type Ctx, type Appointment, type User } from "./store-context";
+
+export type { Appointment, User };
 
 /**
  * Camada de dados temporária (somente frontend).
@@ -15,26 +17,6 @@ import { BARBERS, SERVICES, serviceById, type Barber } from "./shop";
  * Quando o backend for ligado, basta trocar as funções deste arquivo.
  */
 
-export type User = {
-  id: string;
-  name: string;
-  email: string;
-  phone: string;
-  password: string;
-  role: "client" | "admin";
-};
-
-export type Appointment = {
-  id: string;
-  userId: string;
-  userName: string;
-  serviceId: string;
-  barberId: string;
-  date: string; // yyyy-mm-dd
-  time: string; // HH:mm
-  status: "confirmado" | "cancelado" | "concluido";
-  createdAt: string;
-};
 
 const USERS_KEY = "cn.users";
 const SESSION_KEY = "cn.session";
@@ -120,30 +102,6 @@ const SEED_APPTS: Appointment[] = [
   },
 ];
 
-type Ctx = {
-  ready: boolean;
-  user: User | null;
-  users: User[];
-  appointments: Appointment[];
-  signIn: (email: string, password: string) => Promise<User>;
-  signUp: (data: Omit<User, "id" | "role">) => Promise<User>;
-  signOut: () => void;
-  updateProfile: (data: Pick<User, "name" | "email" | "phone">) => Promise<void>;
-  changePassword: (current: string, next: string) => Promise<void>;
-  deleteAccount: (password: string) => Promise<void>;
-  book: (input: {
-    serviceId: string;
-    barberId: string;
-    date: string;
-    time: string;
-  }) => Promise<Appointment>;
-  cancelAppointment: (id: string) => Promise<void>;
-  rescheduleAppointment: (id: string, date: string, time: string) => Promise<void>;
-  completeAppointment: (id: string) => Promise<void>;
-  removeAppointment: (id: string) => Promise<void>;
-};
-
-const StoreContext = createContext<Ctx | null>(null);
 
 export function StoreProvider({ children }: { children: ReactNode }) {
   const [ready, setReady] = useState(false);
