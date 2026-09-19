@@ -144,7 +144,7 @@ function AuthPage() {
               <Input
                 id="su-phone"
                 required
-                placeholder="(11) 99999-0000"
+                placeholder="(21) 99999-0000"
                 value={form.phone}
                 onChange={(e) => setForm({ ...form, phone: e.target.value })}
               />
