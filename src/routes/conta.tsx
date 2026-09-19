@@ -15,16 +15,16 @@ import { formatDate } from "./agendamento";
 export const Route = createFileRoute("/conta")({
   head: () => ({
     meta: [
-      { title: "Minha conta — Corvo & Navalha" },
+      { title: "Minha conta — New Age" },
       {
         name: "description",
         content:
-          "Veja, remarque ou cancele seus agendamentos, atualize seu perfil e sua senha na Corvo & Navalha.",
+          "Veja, remarque ou cancele seus agendamentos, atualize seu perfil e sua senha na New Age.",
       },
-      { property: "og:title", content: "Minha conta — Corvo & Navalha" },
+      { property: "og:title", content: "Minha conta — New Age" },
       {
         property: "og:description",
-        content: "Área do cliente da barbearia Corvo & Navalha.",
+        content: "Área do cliente da barbearia New Age.",
       },
     ],
   }),

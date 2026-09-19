@@ -62,10 +62,10 @@ function write(key: string, value: unknown) {
 const SEED_USERS: User[] = [
   {
     id: "u-admin",
-    name: "Rafael Corvo",
-    email: "admin@corvoenavalha.com.br",
+    name: "Rafael Nunes",
+    email: "admin@newagebarber.com.br",
     phone: "(11) 99999-0001",
-    password: "corvo123",
+    password: "newage123",
     role: "admin",
   },
   {
@@ -89,7 +89,7 @@ const SEED_APPTS: Appointment[] = [
     id: "a-1",
     userId: "u-demo",
     userName: "Bruno Salgado",
-    serviceId: "combo-corvo",
+    serviceId: "combo-premium",
     barberId: "rafael",
     date: isoDay(2),
     time: "15:00",

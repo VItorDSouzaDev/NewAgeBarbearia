@@ -7,11 +7,11 @@ import gallery3 from "@/assets/gallery-3.jpg";
 import gallery4 from "@/assets/gallery-4.jpg";
 
 export const SHOP = {
-  name: "Corvo & Navalha",
+  name: "New Age",
   tagline: "Barbearia boutique",
   phoneLabel: "(11) 4002-8922",
   whatsapp: "5511940028922",
-  email: "contato@corvoenavalha.com.br",
+  email: "contato@newagebarber.com.br",
   address: "Rua Aspicuelta, 412 — Vila Madalena, São Paulo — SP",
   maps: "https://maps.google.com/?q=Rua+Aspicuelta+412+Vila+Madalena+Sao+Paulo",
   hours: [
@@ -55,8 +55,8 @@ export const SERVICES: Service[] = [
     duration: 40,
   },
   {
-    id: "combo-corvo",
-    name: "Combo Corvo",
+    id: "combo-premium",
+    name: "Combo Premium",
     description: "Corte navalhado + barba terapia, com dose de whisky por conta da casa.",
     price: 70,
     duration: 90,
@@ -92,7 +92,7 @@ export type Barber = {
 export const BARBERS: Barber[] = [
   {
     id: "rafael",
-    name: "Rafael Corvo",
+    name: "Rafael Nunes",
     role: "Master barber & sócio",
     bio: "18 anos de ofício. Especialista em cortes clássicos e barba desenhada.",
     photo: barber1,
@@ -139,7 +139,7 @@ export const TESTIMONIALS = [
   {
     name: "Diego Ferrari",
     role: "Arquiteto",
-    text: "O Combo Corvo virou meu ritual quinzenal. Agendo pelo site em 30 segundos e nunca esperei além do horário.",
+    text: "O Combo Premium virou meu ritual quinzenal. Agendo pelo site em 30 segundos e nunca esperei além do horário.",
     rating: 5,
   },
   {

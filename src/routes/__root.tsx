@@ -83,14 +83,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Corvo & Navalha — Barbearia boutique em São Paulo" },
+      { title: "New Age — Barbearia boutique em São Paulo" },
       {
         name: "description",
         content:
           "Barbearia boutique na Vila Madalena. Corte, barba e agendamento online.",
       },
-      { name: "author", content: "Corvo & Navalha" },
-      { property: "og:title", content: "Corvo & Navalha — Barbearia boutique" },
+      { name: "author", content: "New Age" },
+      { property: "og:title", content: "New Age — Barbearia boutique" },
       {
         property: "og:description",
         content: "Corte, barba e agendamento online na Vila Madalena.",

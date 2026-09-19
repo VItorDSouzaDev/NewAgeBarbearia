@@ -20,16 +20,16 @@ import { useStore } from "@/lib/store";
 export const Route = createFileRoute("/auth")({
   head: () => ({
     meta: [
-      { title: "Entrar ou criar conta — Corvo & Navalha" },
+      { title: "Entrar ou criar conta — New Age" },
       {
         name: "description",
         content:
-          "Acesse sua conta na Corvo & Navalha para agendar, remarcar ou cancelar horários.",
+          "Acesse sua conta na New Age para agendar, remarcar ou cancelar horários.",
       },
-      { property: "og:title", content: "Entrar — Corvo & Navalha" },
+      { property: "og:title", content: "Entrar — New Age" },
       {
         property: "og:description",
-        content: "Login e cadastro de clientes da barbearia Corvo & Navalha.",
+        content: "Login e cadastro de clientes da barbearia New Age.",
       },
     ],
   }),
@@ -113,7 +113,7 @@ function AuthPage() {
             </Button>
             <p className="mt-4 text-xs text-muted-foreground">
               Demonstração — cliente: cliente@exemplo.com / cliente123 · admin:
-              admin@corvoenavalha.com.br / corvo123
+              admin@newagebarber.com.br / newage123
             </p>
           </div>
         </TabsContent>

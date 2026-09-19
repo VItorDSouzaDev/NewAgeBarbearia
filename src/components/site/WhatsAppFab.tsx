@@ -5,7 +5,7 @@ import { SHOP } from "@/lib/shop";
 export function WhatsAppFab() {
   const reduce = useReducedMotion();
   const href = `https://wa.me/${SHOP.whatsapp}?text=${encodeURIComponent(
-    "Olá! Gostaria de tirar uma dúvida sobre horários na Corvo & Navalha.",
+    "Olá! Gostaria de tirar uma dúvida sobre horários na New Age.",
   )}`;
 
   return (
