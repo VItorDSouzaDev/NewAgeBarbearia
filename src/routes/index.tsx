@@ -23,13 +23,13 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Corte, barba e navalha em ambiente boutique na Vila Madalena. Veja serviços, preços, equipe e agende online em poucos toques.",
+          "Corte, barba e navalha em ambiente boutique na Várzea, Teresópolis. Veja serviços, preços, equipe e agende online em poucos toques.",
       },
       { property: "og:title", content: "New Age — Barbearia boutique" },
       {
         property: "og:description",
         content:
-          "Corte, barba e navalha na Vila Madalena, com agendamento online.",
+          "Corte, barba e navalha na Várzea, Teresópolis, com agendamento online.",
       },
     ],
   }),
@@ -90,7 +90,7 @@ function Hero() {
           data-hero="eyebrow"
           className="text-xs uppercase tracking-[0.35em] text-primary"
         >
-          Vila Madalena · desde 2016
+          Várzea · desde 2016
         </p>
 
         <h1
