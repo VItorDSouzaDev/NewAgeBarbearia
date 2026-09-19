@@ -102,30 +102,6 @@ const SEED_APPTS: Appointment[] = [
   },
 ];
 
-type Ctx = {
-  ready: boolean;
-  user: User | null;
-  users: User[];
-  appointments: Appointment[];
-  signIn: (email: string, password: string) => Promise<User>;
-  signUp: (data: Omit<User, "id" | "role">) => Promise<User>;
-  signOut: () => void;
-  updateProfile: (data: Pick<User, "name" | "email" | "phone">) => Promise<void>;
-  changePassword: (current: string, next: string) => Promise<void>;
-  deleteAccount: (password: string) => Promise<void>;
-  book: (input: {
-    serviceId: string;
-    barberId: string;
-    date: string;
-    time: string;
-  }) => Promise<Appointment>;
-  cancelAppointment: (id: string) => Promise<void>;
-  rescheduleAppointment: (id: string, date: string, time: string) => Promise<void>;
-  completeAppointment: (id: string) => Promise<void>;
-  removeAppointment: (id: string) => Promise<void>;
-};
-
-const StoreContext = createContext<Ctx | null>(null);
 
 export function StoreProvider({ children }: { children: ReactNode }) {
   const [ready, setReady] = useState(false);
