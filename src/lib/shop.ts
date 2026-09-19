@@ -9,11 +9,11 @@ import gallery4 from "@/assets/gallery-4.jpg";
 export const SHOP = {
   name: "New Age",
   tagline: "Barbearia boutique",
-  phoneLabel: "(11) 4002-8922",
-  whatsapp: "5511940028922",
+  phoneLabel: "(21) 4002-8922",
+  whatsapp: "5521940028922",
   email: "contato@newagebarber.com.br",
-  address: "Rua Aspicuelta, 412 — Vila Madalena, São Paulo — SP",
-  maps: "https://maps.google.com/?q=Rua+Aspicuelta+412+Vila+Madalena+Sao+Paulo",
+  address: "Calçada da Fama, 412 — Várzea, Teresópolis — RJ",
+  maps: "https://maps.google.com/?q=Cal%C3%A7ada+da+Fama+V%C3%A1rzea+Teres%C3%B3polis+RJ",
   hours: [
     { day: "Segunda", open: "Fechado" },
     { day: "Terça a Sexta", open: "09:00 — 20:00" },
