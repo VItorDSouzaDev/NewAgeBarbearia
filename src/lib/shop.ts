@@ -11,7 +11,7 @@ export const SHOP = {
   tagline: "Barbearia boutique",
   phoneLabel: "(11) 4002-8922",
   whatsapp: "5511940028922",
-  email: "contato@newagebarbearia.com.br",
+  email: "contato@newagebarber.com.br",
   address: "Rua Aspicuelta, 412 — Vila Madalena, São Paulo — SP",
   maps: "https://maps.google.com/?q=Rua+Aspicuelta+412+Vila+Madalena+Sao+Paulo",
   hours: [
@@ -92,7 +92,7 @@ export type Barber = {
 export const BARBERS: Barber[] = [
   {
     id: "rafael",
-    name: "Rafael Martins",
+    name: "Rafael Nunes",
     role: "Master barber & sócio",
     bio: "18 anos de ofício. Especialista em cortes clássicos e barba desenhada.",
     photo: barber1,

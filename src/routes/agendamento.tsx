@@ -23,8 +23,6 @@ export const Route = createFileRoute("/agendamento")({
         property: "og:description",
         content: "Agendamento online de corte e barba na Vila Madalena.",
       },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Booking,

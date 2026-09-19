@@ -26,8 +26,6 @@ export const Route = createFileRoute("/conta")({
         property: "og:description",
         content: "Área do cliente da barbearia New Age.",
       },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Account,

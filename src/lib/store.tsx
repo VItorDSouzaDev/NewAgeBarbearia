@@ -62,8 +62,8 @@ function write(key: string, value: unknown) {
 const SEED_USERS: User[] = [
   {
     id: "u-admin",
-    name: "Rafael Martins",
-    email: "admin@newagebarbearia.com.br",
+    name: "Rafael Nunes",
+    email: "admin@newagebarber.com.br",
     phone: "(11) 99999-0001",
     password: "newage123",
     role: "admin",
@@ -152,25 +152,8 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   const [userId, setUserId] = useState<string | null>(null);
 
   useEffect(() => {
-    const storedUsers = read(USERS_KEY, SEED_USERS).map((storedUser) =>
-      storedUser.id === "u-admin"
-        ? {
-            ...storedUser,
-            name: "Rafael Martins",
-            email: "admin@newagebarbearia.com.br",
-            password: "newage123",
-          }
-        : storedUser,
-    );
-    const storedAppointments = read(APPTS_KEY, SEED_APPTS).map((appointment) =>
-      appointment.serviceId === "combo-corvo"
-        ? { ...appointment, serviceId: "combo-premium" }
-        : appointment,
-    );
-    setUsers(storedUsers);
-    setAppointments(storedAppointments);
-    write(USERS_KEY, storedUsers);
-    write(APPTS_KEY, storedAppointments);
+    setUsers(read(USERS_KEY, SEED_USERS));
+    setAppointments(read(APPTS_KEY, SEED_APPTS));
     setUserId(read<string | null>(SESSION_KEY, null));
     setReady(true);
   }, []);

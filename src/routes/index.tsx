@@ -31,8 +31,6 @@ export const Route = createFileRoute("/")({
         content:
           "Corte, barba e navalha na Vila Madalena, com agendamento online.",
       },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Home,

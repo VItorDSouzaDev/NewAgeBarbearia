@@ -31,8 +31,6 @@ export const Route = createFileRoute("/auth")({
         property: "og:description",
         content: "Login e cadastro de clientes da barbearia New Age.",
       },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: AuthPage,
@@ -115,7 +113,7 @@ function AuthPage() {
             </Button>
             <p className="mt-4 text-xs text-muted-foreground">
               Demonstração — cliente: cliente@exemplo.com / cliente123 · admin:
-              admin@newagebarbearia.com.br / newage123
+              admin@newagebarber.com.br / newage123
             </p>
           </div>
         </TabsContent>
