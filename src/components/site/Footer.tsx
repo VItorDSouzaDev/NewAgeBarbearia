@@ -9,7 +9,7 @@ export function Footer() {
         <div>
           <h3 className="font-display text-2xl">{SHOP.name}</h3>
           <p className="mt-3 max-w-xs text-sm text-muted-foreground">
-            {SHOP.tagline} na Vila Madalena. Corte, barba e um cuidado que dura
+            {SHOP.tagline} na Várzea. Corte, barba e um cuidado que dura
             até a próxima visita.
           </p>
         </div>
