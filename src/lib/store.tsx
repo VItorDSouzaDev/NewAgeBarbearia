@@ -17,26 +17,6 @@ export type { Appointment, User };
  * Quando o backend for ligado, basta trocar as funções deste arquivo.
  */
 
-export type User = {
-  id: string;
-  name: string;
-  email: string;
-  phone: string;
-  password: string;
-  role: "client" | "admin";
-};
-
-export type Appointment = {
-  id: string;
-  userId: string;
-  userName: string;
-  serviceId: string;
-  barberId: string;
-  date: string; // yyyy-mm-dd
-  time: string; // HH:mm
-  status: "confirmado" | "cancelado" | "concluido";
-  createdAt: string;
-};
 
 const USERS_KEY = "cn.users";
 const SESSION_KEY = "cn.session";
