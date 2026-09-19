@@ -62,10 +62,10 @@ function write(key: string, value: unknown) {
 const SEED_USERS: User[] = [
   {
     id: "u-admin",
-    name: "Rafael Corvo",
-    email: "admin@corvoenavalha.com.br",
+    name: "Rafael Martins",
+    email: "admin@newagebarbearia.com.br",
     phone: "(11) 99999-0001",
-    password: "corvo123",
+    password: "newage123",
     role: "admin",
   },
   {
@@ -89,7 +89,7 @@ const SEED_APPTS: Appointment[] = [
     id: "a-1",
     userId: "u-demo",
     userName: "Bruno Salgado",
-    serviceId: "combo-corvo",
+    serviceId: "combo-premium",
     barberId: "rafael",
     date: isoDay(2),
     time: "15:00",
@@ -152,8 +152,25 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   const [userId, setUserId] = useState<string | null>(null);
 
   useEffect(() => {
-    setUsers(read(USERS_KEY, SEED_USERS));
-    setAppointments(read(APPTS_KEY, SEED_APPTS));
+    const storedUsers = read(USERS_KEY, SEED_USERS).map((storedUser) =>
+      storedUser.id === "u-admin"
+        ? {
+            ...storedUser,
+            name: "Rafael Martins",
+            email: "admin@newagebarbearia.com.br",
+            password: "newage123",
+          }
+        : storedUser,
+    );
+    const storedAppointments = read(APPTS_KEY, SEED_APPTS).map((appointment) =>
+      appointment.serviceId === "combo-corvo"
+        ? { ...appointment, serviceId: "combo-premium" }
+        : appointment,
+    );
+    setUsers(storedUsers);
+    setAppointments(storedAppointments);
+    write(USERS_KEY, storedUsers);
+    write(APPTS_KEY, storedAppointments);
     setUserId(read<string | null>(SESSION_KEY, null));
     setReady(true);
   }, []);

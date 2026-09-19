@@ -12,17 +12,19 @@ import { buildSlots, barberWorksOn, useStore } from "@/lib/store";
 export const Route = createFileRoute("/agendamento")({
   head: () => ({
     meta: [
-      { title: "Agendar horário — Corvo & Navalha" },
+      { title: "Agendar horário — New Age" },
       {
         name: "description",
         content:
-          "Escolha serviço, barbeiro, data e horário e confirme seu agendamento na Corvo & Navalha em poucos toques.",
+          "Escolha serviço, barbeiro, data e horário e confirme seu agendamento na New Age em poucos toques.",
       },
-      { property: "og:title", content: "Agendar horário — Corvo & Navalha" },
+      { property: "og:title", content: "Agendar horário — New Age" },
       {
         property: "og:description",
         content: "Agendamento online de corte e barba na Vila Madalena.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Booking,

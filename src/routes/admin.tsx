@@ -15,17 +15,19 @@ import { formatDate } from "./agendamento";
 export const Route = createFileRoute("/admin")({
   head: () => ({
     meta: [
-      { title: "Painel do barbeiro — Corvo & Navalha" },
+      { title: "Painel do barbeiro — New Age" },
       {
         name: "description",
         content:
-          "Gerencie a agenda do dia, os serviços da carta e a base de clientes da Corvo & Navalha.",
+          "Gerencie a agenda do dia, os serviços da carta e a base de clientes da New Age.",
       },
-      { property: "og:title", content: "Painel do barbeiro — Corvo & Navalha" },
+      { property: "og:title", content: "Painel do barbeiro — New Age" },
       {
         property: "og:description",
-        content: "Agenda, serviços e clientes da barbearia Corvo & Navalha.",
+        content: "Agenda, serviços e clientes da barbearia New Age.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Admin,

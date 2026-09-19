@@ -30,7 +30,7 @@ export function Footer() {
           </p>
           <p className="flex items-center gap-2">
             <Instagram className="size-4 text-primary" aria-hidden />
-            @corvoenavalha
+            @newagebarbearia
           </p>
         </div>
 

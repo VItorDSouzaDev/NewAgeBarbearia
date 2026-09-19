@@ -19,18 +19,20 @@ import {
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Corvo & Navalha — Barbearia boutique na Vila Madalena" },
+      { title: "New Age — Barbearia boutique na Vila Madalena" },
       {
         name: "description",
         content:
           "Corte, barba e navalha em ambiente boutique na Vila Madalena. Veja serviços, preços, equipe e agende online em poucos toques.",
       },
-      { property: "og:title", content: "Corvo & Navalha — Barbearia boutique" },
+      { property: "og:title", content: "New Age — Barbearia boutique" },
       {
         property: "og:description",
         content:
           "Corte, barba e navalha na Vila Madalena, com agendamento online.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Home,
@@ -78,7 +80,7 @@ function Hero() {
     <section ref={scope} className="relative isolate overflow-hidden">
       <img
         src={heroImg}
-        alt="Interior da barbearia Corvo & Navalha com cadeira de couro e luz âmbar"
+        alt="Interior da barbearia New Age com cadeira de couro e luz âmbar"
         width={1600}
         height={1104}
         className="absolute inset-0 -z-10 size-full object-cover opacity-45"
