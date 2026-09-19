@@ -1,5 +1,4 @@
 import {
-  createContext,
   useCallback,
   useContext,
   useEffect,
@@ -8,6 +7,9 @@ import {
   type ReactNode,
 } from "react";
 import { BARBERS, SERVICES, serviceById, type Barber } from "./shop";
+import { StoreContext, type Ctx, type Appointment, type User } from "./store-context";
+
+export type { Appointment, User };
 
 /**
  * Camada de dados temporária (somente frontend).
